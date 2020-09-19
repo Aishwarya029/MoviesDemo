@@ -1,0 +1,72 @@
+<!DOCTYPE=html>
+    <head>
+    <title>Movies</title>
+    <style>
+        div.gallery {
+                margin: 70px;
+                border: 2px solid #ccc;
+                display:inline-block;
+                width: 350px;
+                background-color:white;
+                }
+
+        div.gallery:hover {
+                transform:scale(1.2);
+                }
+
+        div.gallery img {
+                width: 350px;
+                height: 350px;
+                background-color:white;
+                }
+
+        div.desc {
+                 padding: 05px;
+                text-align:center;
+                background-color:white;
+                }
+          body{
+            
+             background-size:100%;
+             background-attachment:fixed;
+            }   
+         button{
+                  position:relative;
+                  display:inline-block;
+                  padding:10px 30px;
+                  margin:0px 700px;
+                  color:#fff;
+                  font-size:28px;
+                  letter-spacing:2px;
+                  background:linear-gradient(to right,black,grey);
+                  border: 2px solid #ccc;
+                 
+                 }
+           
+        
+    </style>
+    </head>
+    <body>
+          
+    <% for(var i=0; i < movie.length; i++) { %>
+
+                <div class="gallery">
+                <a href=<%= "/movies/result?id="+movie[i].id %>>
+                <img src=<%= movie[i].pic_link %> alt=<%= movie[i].pic_link %> width="500" height="500">
+                <div class="desc"><%= movie[i].movie_name %></div>
+                
+                </a>
+                </div>
+
+        <% } %>
+
+        
+    
+        
+
+
+
+        <a href="/"><button type="button">Home</button></a>
+        
+    </body>
+</html>

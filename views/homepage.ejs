@@ -1,0 +1,42 @@
+<!DOCTYPE=html>
+    <head>
+    <title>homePage</title>
+    <style>
+    div.gallery {
+                margin: 50px 120px;
+                border: 1px solid #777;
+                display:inline-block;
+                width: 500px;
+                }
+
+        div.gallery:hover {
+                border: 1px solid #ccc
+                }
+
+        div.gallery img {
+                width: 500px;
+                height: 500px;
+                }
+        body{
+             background-color:black;
+             background-size:100%;
+             background-attachment:fixed;
+            }  
+
+        
+    </style>
+    </head>
+    <body>
+
+        <% for(var i=0; i < categories.length; i++) { %>
+
+                <div class="gallery">
+                <a href=<%= "movies?id="+categories[i].id %>>
+                <img src=<%= categories[i].pic_link %> alt=<%= categories[i].pic_link %> width="500" height="500"></a>
+                </div>
+
+        <% } %>
+
+         
+    </body>
+</html>

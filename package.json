@@ -1,0 +1,25 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "here I add movie description",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "movie productions",
+  "license": "ISC",
+  "dependencies": {
+    "-": "0.0.1",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "g": "^2.0.1",
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.5",
+    "mysql": "^2.18.1",
+    "node-gyp": "^7.1.0",
+    "sync": "^0.2.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

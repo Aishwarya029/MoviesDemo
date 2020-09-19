@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+    <head>
+    <title>Result</title>
+    <style>
+            button{
+                  position:relative;
+                  display:inline-block;
+                  padding:10px 30px;
+                  margin:0px 700px;
+                  color:#fff;
+                  font-size:28px;
+                  letter-spacing:2px;
+                  background:linear-gradient(to right,black,grey);
+                  border: 2px solid #ccc;
+                 }
+
+                 iframe{
+                         display: block;
+                         margin:30px 100px;
+                 }
+                
+        
+    </style>
+    </head>
+    <body>
+
+       <h1 ><center> WELCOME </center></h1> 
+
+        
+        <% for(var i=0; i < result.length; i++) { %>
+
+                <div class="gallery">
+                <iframe src="<%=( result[i].wiki_link)%>"  title="wiki" width="80%" height="300" style="border:1px solid black"></iframe>
+                <iframe src="<%=( result[i].imdb_link)%>"  title="imdb" width="80%" height="300" style="border:1px solid black"></iframe>
+                <iframe src="<%=( result[i].rottenT_link)%>"  title="rottenTomatoes" width="80%" height="300" style="border:1px solid black"></iframe>
+                </div>
+
+        <% } %>
+
+        
+
+       <a href="/"><button type="button"><b>Home</b></button></a>
+    </body>
+</html>
