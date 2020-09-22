@@ -1,12 +1,4 @@
-alter table titles
-add foreign key(movie_id)
-references movies(movie_id);
-
-
-select * from titles;
-select * from movies;
-
-
+CREATE USER 'movietest'@'localhost' IDENTIFIED WITH mysql_native_password BY '1qaz!QAZ';
 
 create table category(
 id varchar(20) primary key,
@@ -25,14 +17,19 @@ background varchar(100),
 movie_name  varchar(60)
 );
 
+create table result(
+ movie_id varchar(20) references movie(id),
+ wiki_link varchar(100),
+ imdb_link varchar(100),
+ rottenT_link varchar(100),
+ primary key(movie_id),
+ heading varchar(60)
+);
+
+
+
 insert into category values("1","Batman","batmanhome.jpg");
-
 insert into category values("2","HarryPotter","howarts-houses.jpg");
-
-drop table category;
-select * from result;
-drop table movie;
-drop table movies;
 
 
 insert into movie values("1","1","BM1","batman1989.jpg","https://en.wikipedia.org/wiki/Batman_(1989_film)","GOTHAM","batmansymbol.jpg","Batman (1989)");
@@ -53,19 +50,7 @@ insert into movie values("15","2","HP6","HarryPotterandtheHalf-BloodPrince.jpg",
 insert into movie values("16","2","HP7","HarryPotterandtheDeathlyHallows–Part1.jpg","https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_1","HOGWARDS","hogbag.jpg","Harry Potter and the Deathly Hallows – Part 1");
 insert into movie values("17","2","HP8","HarryPotterandtheDeathlyHallows–Part2.jpg","https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows_%E2%80%93_Part_2","HOGWARDS","hogbag.jpg","Harry Potter and the Deathly Hallows – Part 2");
 
-CREATE USER 'movie_user'@'localhost' IDENTIFIED BY '1qaz!QAZ';
-ALTER USER 'movie_user'@'localhost' IDENTIFIED WITH mysql_native_password BY '1qaz!QAZ';
 
-alter table movie ;
-drop table result;
- create table result(
- movie_id varchar(20) references movie(id),
- wiki_link varchar(100),
- imdb_link varchar(100),
- rottenT_link varchar(100),
- primary key(movie_id),
- heading varchar(60)
- );
 insert into result values("1","https://en.wikipedia.org/wiki/Batman_(1989_film)","https://www.imdb.com/title/tt0096895/","https://www.rottentomatoes.com/m/1001781_batman","Batman (1989)");
 insert into result values("2","https://en.wikipedia.org/wiki/Batman_Returns","https://www.imdb.com/title/tt0103776/","https://www.rottentomatoes.com/m/batman_returns","Batman Returns (1992)");
 insert into result values("3","https://en.wikipedia.org/wiki/Batman_Forever","https://www.imdb.com/title/tt0112462/","https://www.rottentomatoes.com/m/batman_forever","Batman Forever (1995)");
