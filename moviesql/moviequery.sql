@@ -1,4 +1,3 @@
-CREATE USER 'movietest'@'localhost' IDENTIFIED WITH mysql_native_password BY '1qaz!QAZ';
 
 create table category(
 id varchar(20) primary key,
