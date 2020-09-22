@@ -2,6 +2,7 @@
   "name": "movies",
   "version": "1.0.0",
   "description": "here I add movie description",
+
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js"

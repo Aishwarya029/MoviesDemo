@@ -24,21 +24,22 @@
     </head>
     <body>
 
-       <h1 ><center> WELCOME </center></h1> 
+       <h1><center><%=movie_name%> </center></h1>
 
         
         <% for(var i=0; i < result.length; i++) { %>
 
                 <div class="gallery">
-                <iframe src="<%=( result[i].wiki_link)%>"  title="wiki" width="80%" height="300" style="border:1px solid black"></iframe>
+                <iframe src="<%=( result[i].wiki_link)%>"  title="wiki" width="80%" height="300" style="border:1px solid black" ></iframe>
                 <iframe src="<%=( result[i].imdb_link)%>"  title="imdb" width="80%" height="300" style="border:1px solid black"></iframe>
                 <iframe src="<%=( result[i].rottenT_link)%>"  title="rottenTomatoes" width="80%" height="300" style="border:1px solid black"></iframe>
-                </div>
-
+                
+                <embed src="http://blog.vigowebs.com" width="80%" height="300" style="border:1px solid black" />
+                        </div>
         <% } %>
 
         
 
-       <a href="/"><button type="button"><b>Home</b></button></a>
+       <a href='/'> ><button type="button"><b>Home</b></button></a>
     </body>
 </html>

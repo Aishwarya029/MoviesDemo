@@ -40,11 +40,12 @@ const database = new Database({
 app.use(express.static('public'))
 
 app.get('/',function(req,res){
-
   database.query( 'SELECT * FROM category' ).then( rows => {
-    console.log("df")
     res.render("homepage.ejs",{ categories: rows })
-  });    
+    
+    });
+  
+
 })
 
 
@@ -54,18 +55,32 @@ app.get('/',function(req,res){
 
 app.get('/movies',function(req,res){
     var category_id= req.query.id
+    var backimage
+    var title
+    database.query( 'SELECT * FROM category where id='+category_id ).then( rows => {
+        backimage = rows[0].background
+        title = rows[0].title
+    });
+    
     database.query( 'SELECT * FROM movie where category_id='+category_id ).then( rows => {
-     res.render("movies.ejs",{ movie: rows })
- });    
+     res.render("movies.ejs",{ movie: rows,backimage: backimage,title:title})    
+   
+    });
+     
+
 })
 
 app.get('/movies/result',function(req,res){
     var movie_id= req.query.id
+    var movie_name
+    database.query( 'SELECT * FROM movie where  id='+movie_id ).then( rows => {
+        movie_name=rows[0].movie_name
+        
+    }); 
     database.query( 'SELECT * FROM result where movie_id='+movie_id ).then( rows => {
-    res.render("result.ejs",{ result: rows })
+    res.render("result.ejs",{ result: rows,movie_name:movie_name })
 });    
 })
 
-app.listen(3000,function(req,res){
-    console.log("hsqush")
-});
+app.listen(3000,'0.0.0.0')
+console.log("ejhdjhd")

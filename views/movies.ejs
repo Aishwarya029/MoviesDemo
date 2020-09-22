@@ -3,7 +3,7 @@
     <title>Movies</title>
     <style>
         div.gallery {
-                margin: 70px;
+                margin: 40px 70px;
                 border: 2px solid #ccc;
                 display:inline-block;
                 width: 350px;
@@ -26,7 +26,7 @@
                 background-color:white;
                 }
           body{
-            
+             background-image: url('<%=backimage%>');
              background-size:100%;
              background-attachment:fixed;
             }   
@@ -42,16 +42,21 @@
                   border: 2px solid #ccc;
                  
                  }
+        h1{
+                color:#fff;
+                 padding:30px 50px;
+                
+        }
            
         
     </style>
     </head>
     <body>
-          
+          <h1><center>WELCOME TO <%=title%> </center></h1>
     <% for(var i=0; i < movie.length; i++) { %>
 
                 <div class="gallery">
-                <a href=<%= "/movies/result?id="+movie[i].id %>>
+                <a href=<%= "/movies/result?id="+ movie[i].id %>>
                 <img src=<%= movie[i].pic_link %> alt=<%= movie[i].pic_link %> width="500" height="500">
                 <div class="desc"><%= movie[i].movie_name %></div>
                 
