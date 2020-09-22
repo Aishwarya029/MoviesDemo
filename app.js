@@ -31,7 +31,7 @@ class Database {
 }
 
 const database = new Database({
-  host: "localhost",
+  host: "127.0.0.1",
   user: "movietest",
   password: "1qaz!QAZ",
   database: "movies"
@@ -82,5 +82,5 @@ app.get('/movies/result',function(req,res){
 });    
 })
 
-app.listen(3000,'0.0.0.0')
+app.listen(3000,'127.0.0.1')
 console.log("ejhdjhd")
