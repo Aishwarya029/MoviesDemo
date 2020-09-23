@@ -3,6 +3,7 @@ const express = require ('express');
 const app=express();
 
 var mysql = require('mysql');
+const port=3000
 
 
 
@@ -31,10 +32,12 @@ class Database {
 }
 
 const database = new Database({
-  host: "localhost",
+  host: "mysql",
   user: "movietest",
   password: "1qaz!QAZ",
-  database: "movies"
+  database: "movies",
+  port: 3306,
+  insecureAuth : true
 })
 
 app.use(express.static('public'))
@@ -82,5 +85,6 @@ app.get('/movies/result',function(req,res){
 });    
 })
 
-app.listen(3000,'0.0.0.0')
-console.log("ejhdjhd")
+app.listen(port, () => {
+    console.log(`Example app listening at http://localhost:${port}`)
+  })
