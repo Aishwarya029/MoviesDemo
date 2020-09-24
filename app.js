@@ -32,7 +32,7 @@ class Database {
 }
 
 const database = new Database({
-  host: "localhost",
+  host: "mysql",
   user: "movietest",
   password: "1qaz!QAZ",
   database: "movies",
