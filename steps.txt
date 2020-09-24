@@ -12,9 +12,10 @@ docker login (if docker permission denied)
 step 3: docker build -t aishwarya029/moviesdemo:latest . -f Dockerfile_app(only for code)
 	docker push aishwarya029/moviesdemo:latest
 
-step 4: docker volume rm $(docker volume ls -q)
-	docker build -t aishwarya029/moviesdemo_db:latest /Users/avinashnayak/moviesGit/MoviesDemo -f Dockerfile_db(onlt if we change db)
-	docker push -t aishwarya029/moviesdemo_db:latest
+step 4: docker rm -f $(docker ps -a -q)
+	docker volume rm $(docker volume ls -q)
+	docker build -t aishwarya029/moviesdemo_db:latest . -f Dockerfile_db(onlt if we change db)
+	docker push aishwarya029/moviesdemo_db:latest
 
 step 5: docker-compose down (server down)
 step 6: docker-compose pull (download latest)
