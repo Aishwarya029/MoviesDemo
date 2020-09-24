@@ -36,7 +36,7 @@ insert into movie values("6","1","BM6","TheDarkKnight2009.jpg","The Dark Knight 
 insert into movie values("7","1","BM7","TheDarkKnightRises2013.jpg","The Dark Knight Rises (2013)");
 insert into movie values("8","1","BM8","BatmanvSuperman.jpg","Batman v Superman(2016)");
 insert into movie values("9","1","BM9","thebatman.jpg","The Batman (2021)");
-insert into movie values("10","2","HP1","HarryPotterandthePhilosopher'sStone.jpg","Harry Potter and the Philosopher's Stone");
+insert into movie values("10","2","HP1","HarryPotterandthePhilosophersStone.jpg","Harry Potter and the Philosopher's Stone");
 insert into movie values("11","2","HP2","HarryPotterandtheChamberofSecrets.jpg","Harry Potter and the Chamber of Secrets");
 insert into movie values("12","2","HP3","HarryPotterandthePrisonerofAzkaban.jpg","Harry Potter and the Prisoner of Azkaban");
 insert into movie values("13","2","HP4","HarryPotterandtheGobletofFire.jpg","Harry Potter and the Goblet of Fire");
