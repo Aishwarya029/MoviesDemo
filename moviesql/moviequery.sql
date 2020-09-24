@@ -28,12 +28,12 @@ insert into category values("1","Batman","batmanhome.jpg","GOTHAM","batmansymbol
 insert into category values("2","HarryPotter","howarts-houses.jpg","HOGWARDS","hogbag.jpg");
 
 insert into movie values("1","1","BM1","batman1989.jpg","Batman (1989)");
-insert into movie values("2","1","BM2","BatmanReturns(1993).jpg","Batman Returns (1993)");
-insert into movie values("3","1","BM3","BatmanForever(1996).jpg","Batman Forever (1996)");
-insert into movie values("4","1","BM4","Batman&Robin(1998).jpg","Batman & Robin (1998)");
-insert into movie values("5","1","BM5","BatmanBegins(2006).jpg","Batman Begins (2006)");
-insert into movie values("6","1","BM6","TheDarkKnight(2009).jpg","The Dark Knight (2009)");
-insert into movie values("7","1","BM7","TheDarkKnightRises(2013).jpg","The Dark Knight Rises (2013)");
+insert into movie values("2","1","BM2","BatmanReturns1993.jpg","Batman Returns (1993)");
+insert into movie values("3","1","BM3","BatmanForever1996.jpg","Batman Forever (1996)");
+insert into movie values("4","1","BM4","Batman&Robin1998.jpg","Batman & Robin (1998)");
+insert into movie values("5","1","BM5","BatmanBegins2006.jpg","Batman Begins (2006)");
+insert into movie values("6","1","BM6","TheDarkKnight2009.jpg","The Dark Knight (2009)");
+insert into movie values("7","1","BM7","TheDarkKnightRises2013.jpg","The Dark Knight Rises (2013)");
 insert into movie values("8","1","BM8","BatmanvSuperman.jpg","Batman v Superman(2016)");
 insert into movie values("9","1","BM9","thebatman.jpg","The Batman (2021)");
 insert into movie values("10","2","HP1","HarryPotterandthePhilosopher'sStone.jpg","Harry Potter and the Philosopher's Stone");
